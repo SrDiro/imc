@@ -47,7 +47,7 @@ public class FXMLDocumentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        panel.setStyle("-fx-background-image: url(file:///C:/Users/daw/Documents/NetBeansProjects/IMC/gif/safe_image.gif); -fx-background-size: 610px 348px;");
+        panel.setStyle("-fx-background-image: url(file:///C:/Users/daw/Documents/NetBeansProjects/IMC/gif/safe_image.gif); -fx-background-size: 705px 591px;");
     }
 
     @FXML
