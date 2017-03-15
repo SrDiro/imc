@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="348.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imc.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="panel" prefHeight="348.0" prefWidth="610.0" stylesheets="@css.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imc.FXMLDocumentController">
    <children>
       <Label fx:id="labelTitulo" layoutX="150.0" layoutY="26.0" text="INDICE DE MASA CORPORAL (IMC)" textFill="#1706ff">
          <font>

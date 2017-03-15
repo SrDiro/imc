@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 
 public class FXMLDocumentController implements Initializable {
 
@@ -41,16 +42,17 @@ public class FXMLDocumentController implements Initializable {
     private RadioButton RBNormal;
     @FXML
     private RadioButton RBExtremaDelgadez;
+    @FXML
+    private AnchorPane panel;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        panel.setStyle("-fx-background-image: url(file:///C:/Users/daw/Documents/NetBeansProjects/IMC/gif/safe_image.gif); -fx-background-size: 610px 348px;");
     }
 
     @FXML
     private void calcularIMC(ActionEvent event) {
-        
-        
+
         double altura, peso, resultado;
         String resultadoFormateado;
 
@@ -70,8 +72,8 @@ public class FXMLDocumentController implements Initializable {
         }
 
         //CALCULO DEL IMC
-        resultado = peso / ((altura/100) * (altura/100));
-        
+        resultado = peso / ((altura / 100) * (altura / 100));
+
         DecimalFormat formateador = new DecimalFormat("00.00");
         resultadoFormateado = formateador.format(resultado);
 
@@ -80,7 +82,7 @@ public class FXMLDocumentController implements Initializable {
         }
 
         this.textFieldResultado.setText(resultadoFormateado);
-        
+
         if (resultado > 30) {
             RBObesidad.fire();
         } else if (resultado > 25 && resultado < 29.9) {
